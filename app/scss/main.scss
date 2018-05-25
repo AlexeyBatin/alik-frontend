@@ -11,7 +11,7 @@
 }
 
 body {
-  height: 2000px;
+  height: 2800px;
   font-size: 16px;
   min-width: 320px;
   position: relative;
@@ -19,6 +19,7 @@ body {
   font-family: $default-font;
   overflow-x: hidden;
   color: #000;
+  background: #f1f1f1;
   input,
   textarea {
     border: #666 1px solid;
@@ -116,8 +117,7 @@ strong {
   @at-root #{&}__text {
     font-size: 1.15em;
   }
-}
- // MAIN 
+} // MAIN 
 .card {
   display: flex;
   flex-direction: column;
@@ -139,7 +139,7 @@ strong {
     font-weight: bold;
   }
   @at-root #{&}__text {
-    padding-top:0.6em;
+    padding-top: 0.6em;
     padding-bottom: 0.8em;
     font-size: 1.15em;
     color: #fff;
@@ -149,5 +149,63 @@ strong {
   }
 }
 
+.block {
+  @at-root #{&}__title {
+    font-size: 1.5em;
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 37px;
+  }
+  @at-root #{&}__line {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #6a6a6a;
+    margin: 0.5em 0;
+    padding: 0;
+  }
+}
+
+.product {
+  padding-top: 60px;
+  @at-root #{&}__image {
+    margin: 0 auto;
+    @extend .img-responsive;
+  }
+  @at-root #{&}__line {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #bebebe;
+    margin: 3em 0 1em 0;
+    padding: 0;
+  }
+  @at-root #{&}__title {
+    font-size: 1.15em;
+    color: $text;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+  @at-root #{&}__price {
+    font-size: 1.5em;
+    color: $accent;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  @at-root #{&}__price--cents {
+    display: inline-block;
+    height: 1.35em;
+    vertical-align: super;
+    font-size: 0.6em;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba($color: $accent, $alpha: 0.5);
+  }
+}
+
+.test {
+  background: red;
+  height: 100px;
+}
 
 @import "media"; // Always at the end
