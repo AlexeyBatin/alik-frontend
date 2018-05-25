@@ -168,6 +168,8 @@ strong {
 }
 
 .product {
+  display: flex;
+  flex-direction: column;
   padding-top: 60px;
   @at-root #{&}__image {
     margin: 0 auto;
@@ -203,9 +205,89 @@ strong {
   }
 }
 
-.test {
-  background: red;
-  height: 100px;
+.box {
+  display: flex;
+  flex-direction: column;
+  background: #e9e9e9;
+  border: 1px solid #cccccc;
+  @at-root #{&}--categories {
+    margin-top: 85px;
+  }
+  @at-root #{&}__title {
+    margin: 0;
+    padding-top: 20px;
+    padding-left: 18px;
+    padding-bottom: 19px;
+    font-size: 1.15em;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid #cccccc;
+  }
+  @at-root #{&}__menu {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 23px;
+    padding-left: 18px;
+    margin-bottom: 19px;
+  }
+  @at-root #{&}__menu-item {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 15px;
+    width: 90%;
+    @include fa-icon;
+    @extend .fas;
+    &:after {
+      transition: 1s;
+      text-align: right;
+      z-index: 10000;
+      width: 20px;
+      background-color: #e9e9e9;
+      color: #6a6a6a;
+      position: absolute;
+      right: 0;
+      top: 2px;
+      content: fa-content($fa-var-plus-circle);
+    }
+    &:hover:after {
+      color: $accent;
+      content: fa-content($fa-var-minus-circle);
+    }
+  }
+  @at-root #{&}__menu-link {
+    font-family: $default-font;
+    font-size: 1.15em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #6a6a6a;
+    &:hover {
+      text-decoration: none;
+      color: #6a6a6a;
+    }
+    &:after,
+    :before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      box-sizing: border-box;
+      width: 100%;
+      height: 1px;
+      background: #6a6a6a;
+      border: solid #6a6a6a;
+      border-top-width: 1px;
+      border-right-width: 1px;
+      border-bottom-width: 1px;
+      border-left-width: 1px;
+      border-width: 0 1px;
+    }
+    &:before {
+      margin-left: -100%;
+    }
+    &:after {
+      margin-right: -100%;
+    }
+  }
 }
 
 @import "media"; // Always at the end
