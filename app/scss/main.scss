@@ -11,7 +11,6 @@
 }
 
 body {
-  height: 4000px;
   font-size: 16px;
   min-width: 320px;
   position: relative;
@@ -339,6 +338,23 @@ strong {
     font-size: 0.6em;
     box-sizing: border-box;
     border-bottom: 1px solid rgba($color: $accent, $alpha: 0.5);
+  }
+}
+
+.tags {
+  margin: 0;
+  color: $light-grey;
+  font-size: 1.15em;
+  font-weight: bold;
+  padding: 30px 20px;
+  @at-root #{&}__link {
+    color: $light-grey;
+    text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+      color: $accent;
+      text-decoration: none;
+    }
   }
 }
 
