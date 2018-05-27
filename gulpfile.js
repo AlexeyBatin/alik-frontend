@@ -78,6 +78,21 @@ gulp.task('img', function () {
 		.pipe(gulp.dest('docs/img'));
 });
 
+gulp.task('docs', ['img', 'scss', 'js'], function () {
+
+  var buildCss = gulp.src('app/css/main.min.css')
+    .pipe(gulp.dest('docs/css'));
+
+  var buildFonts = gulp.src('app/webfonts/**/*')
+    .pipe(gulp.dest('docs/webfonts/'));
+
+  var buildJs = gulp.src('app/js/scripts.min.js')
+    .pipe(gulp.dest('docs/js'));
+
+  var buildHtml = gulp.src('app/*.html')
+    .pipe(gulp.dest('docs'));
+
+});
 
 
 
