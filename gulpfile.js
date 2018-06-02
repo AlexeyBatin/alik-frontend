@@ -84,8 +84,8 @@ gulp.task('docs', ['img', 'scss', 'js'], function () {
   var buildCss = gulp.src('app/css/main.min.css')
     .pipe(gulp.dest('docs/css'));
 
-  var buildFonts = gulp.src('app/webfonts/**/*')
-    .pipe(gulp.dest('docs/webfonts/'));
+  var buildFonts = gulp.src('app/fonts/**/*.*')
+    .pipe(gulp.dest('docs/fonts/'));
 
   var buildJs = gulp.src('app/js/scripts.min.js')
     .pipe(gulp.dest('docs/js'));
