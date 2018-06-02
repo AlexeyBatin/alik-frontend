@@ -68,6 +68,13 @@ strong {
     border: 4px solid #fff;
     background: #fff;
   }
+  @at-root #{&}--bordered {
+    &:hover {
+      background: #f1f1f1;
+      border-color: $accent;
+      border-width: 2px;
+    }
+  }
 }
 
 // HEADER
@@ -480,11 +487,6 @@ strong {
   }
   @at-root #{&}__button {
     width: 40%;
-    &:hover {
-      background: #f1f1f1;
-      border-color: $accent;
-      border-width: 2px;
-    }
   }
   .selected {
     color: $accent;
