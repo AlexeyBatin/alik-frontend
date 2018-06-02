@@ -416,33 +416,33 @@ strong {
     @extend .img-responsive;
   }
   @at-root #{&}__title {
-    margin-top: 5vw;
+    margin-top: 4vw;
     font-size: 1.5em;
     font-weight: bold;
     text-transform: uppercase;
   }
   @at-root #{&}__info {
     text-align: justify;
-    margin-top: 2vw;
-    font-size: 1.15em;
+    font-size: 1em;
     color: $text;
+  }
+  @at-root #{&}__wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 
 .purchase {
-  padding-top: 1vw;
+  display: flex;
+  flex-direction: column;
   @at-root #{&}__label {
-    text-align: right;
-    display: inline-block;
-    width: 49%;
-    font-size: 1.15em;
+    font-size: 0.8em;
     color: $text;
     text-transform: uppercase;
   }
   @at-root #{&}__input {
-    display: inline-block;
-    width: 49%;
-    font-size: 1.15em;
+    font-size: 0.8em;
     color: $text;
     font-weight: bold;
     text-transform: uppercase;
@@ -451,8 +451,6 @@ strong {
     border-width: 0;
   }
   @at-root #{&}__price {
-    text-align: right;
-    margin-top: 2vw;
     font-size: 1.8em;
     color: $accent;
     font-weight: bold;
@@ -467,15 +465,16 @@ strong {
     border-bottom: 1px solid rgba($color: $accent, $alpha: 0.5);
   }
   @at-root #{&}__select {
-    margin-top: 2vw;
+    width: 100%;
     font-size: 1.15em;
     color: $text;
     font-weight: bold;
     height: 46px;
     line-height: 46px;
+    margin-top: 1vw;
   }
   @at-root #{&}__buttons {
-    margin-top: 2vw;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
   }
@@ -492,6 +491,25 @@ strong {
   }
   .list {
     width: inherit;
+  }
+}
+
+.breadcrumb {
+  margin: 0;
+  margin-top: 4vw;
+  background: #f1f1f1;
+  font-size: 1.15em;
+  font-weight: bold;
+  line-height: 1.65;
+  padding-top: 0;
+  padding-left: 0;
+  @at-root #{&}-link {
+    color: $text;
+    transition: 0.5s;
+    &:hover {
+      text-decoration: none;
+      color: $accent;
+    }
   }
 }
 

@@ -66,43 +66,62 @@
 
   </header>
 
-
-  <div class="container-fluid">
+  <main class="container-fluid">
     <div class="detail row">
-      <div class="col-lg-6 offset-lg-1 d-flex">
-        <img src="img/product-img.png" alt="Image" class="detail__image align-self-center">
+      <div class="col-lg-6 offset-lg-1 d-flex flex-column">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a class="breadcrumb-link" href="index.html">Collection</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Product Title</li>
+          </ol>
+        </nav>
+        <div class="detail__wrapper">
+          <img src="img/product-img.png" alt="Image" class="detail__image">
+        </div>
+
       </div>
-      <div class="col-lg-4">
+      <div class="col-lg-4 d-flex flex-column">
         <h3 class="detail__title">Product Title</h3>
-        <p class="detail__info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem error totam esse sint nam soluta? Iure minima, laborum
-          eum dolorem, delectus officia est voluptate numquam eos ratione pariatur perferendis voluptatibus?</p>
+        <p class="detail__info">Adidas – немецкий промышленный концерн, специализирующийся на выпуске спортивной обуви, одежды, сумок, часов, очков,
+          инвентаря и других товаров, связанных со спортом. Компания является крупнейшим производителем спортивных товаров
+          в Европе и вторым по величине в мире.
+        </p>
         <form class="purchase" action="action" method="post">
-          <label for="staticMark" class="purchase__label">Mark</label>
-          <input type="text" readonly class="purchase__input" id="staticMark" value="Nike">
-          <label for="staticMark" class="purchase__label">Model</label>
-          <input type="text" readonly class="purchase__input" id="staticMark" value="Air Max 2009">
-          <label for="staticMark" class="purchase__label">Color</label>
-          <input type="text" readonly class="purchase__input" id="staticMark" value="Black">
-          <br>
-          <select class="purchase__select">
-            <option disabled selected>Choose size</option>
-            <option value="47">47</option>
-            <option value="47">47</option>
-            <option value="47">47</option>
-            <option value="47">47</option>
-          </select>
           <p class="purchase__price">$99.
             <span class="purchase__price--cents">99</span>
           </p>
-          <div class="purchase__buttons">
-              <button class="button purchase__button">Add to bag</button>
-              <button class="button purchase__button">View bag</button>
+          <div class="purchase__row">
+            <label for="staticMark" class="purchase__label ">Mark</label>
+            <input type="text" readonly class="purchase__input " id="staticMark" value="Nike">
           </div>
-          
+          <div class="purchase__row">
+            <label for="staticModel" class="purchase__label ">Model</label>
+            <input type="text" readonly class="purchase__input" id="staticModel" value="Air Max 2009">
+          </div>
+          <div class="purchase__row">
+            <label for="staticColor" class="purchase__label ">Color</label>
+            <input type="text" readonly class="purchase__input" id="staticColor" value="Red">
+          </div>
+
+
+          <select class="purchase__select">
+            <option disabled selected>Choose size</option>
+            <option value="43">43</option>
+            <option value="44">44</option>
+            <option value="45">45</option>
+            <option value="46">46</option>
+          </select>
+          <div class="purchase__buttons">
+            <button class="button purchase__button">Add to bag</button>
+            <button class="button purchase__button">View bag</button>
+          </div>
+
         </form>
       </div>
     </div>
-  </div>
+  </main>
 
   <script src="js/scripts.min.js"></script>
 
