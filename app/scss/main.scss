@@ -444,12 +444,12 @@ strong {
   display: flex;
   flex-direction: column;
   @at-root #{&}__label {
-    font-size: 0.8em;
+    font-size: 0.88em;
     color: $text;
     text-transform: uppercase;
   }
   @at-root #{&}__input {
-    font-size: 0.8em;
+    font-size: 0.88em;
     color: $text;
     font-weight: bold;
     text-transform: uppercase;
@@ -512,6 +512,117 @@ strong {
       text-decoration: none;
       color: $accent;
     }
+  }
+}
+
+.bag {
+  @at-root #{&}__title {
+    font-size: 1.5em;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 37px;
+  }
+  @at-root #{&}__line {
+    @extend .block__line;
+  }
+}
+
+.cart {
+  margin-top: 2vw;
+  position: relative; //box-shadow: 0 6px 4px -4px rgba($color: $light-grey, $alpha: 0.2);
+  @at-root #{&}__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @extend .col-5;
+  }
+  @at-root #{&}__details {
+    @extend .col-7;
+  }
+  @at-root #{&}__delete {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    background: #000;
+    cursor: pointer;
+    @include fa-icon;
+    @extend .fas;
+    &:after {
+      transition: 0.5s;
+      color: $light-grey;
+      content: fa-content($fa-var-times);
+    }
+    &:hover:after {
+      color: $accent;
+    }
+  }
+  @at-root #{&}__image {
+    @extend .img-responsive;
+  }
+  @at-root #{&}__title {
+    padding-top: 20px;
+    font-size: 1.3em;
+    color: $text;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  @at-root #{&}__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  @at-root #{&}__attribute {
+    color: $light-grey;
+    font-size: .88em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+  }
+  @at-root #{&}__price {
+    padding-bottom: 10px;
+    margin: 0;
+    text-align: right;
+    color: darken($accent, 5%);
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+.order {
+  @at-root #{&}__title {
+    font-size: 1.5em;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 37px; // text-align: center;
+    margin-bottom: 0;
+  }
+  @at-root #{&}__products {
+    font-size: 1.15em;
+    color: $text;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  @at-root #{&}__price {
+    @extend .order__products;
+  }
+  @at-root #{&}__price--accent {
+    color: darken($accent, 5%);
+  }
+  @at-root #{&}__button {
+    margin-top: 10px;
+    border-radius: 0;
+    margin-bottom: 20px;
+  }
+  @at-root #{&}__line {
+    @extend .block__line;
   }
 }
 
