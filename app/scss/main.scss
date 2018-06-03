@@ -626,4 +626,47 @@ strong {
   }
 }
 
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  @at-root #{&}__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  @at-root #{&}__title {
+    text-align: center;
+    font-size: 2.25em;
+    text-transform: capitalize;
+  }
+  @at-root #{&}__row {
+    margin: 6px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  @at-root #{&}__label {
+    margin: 0;
+    font-size: 1.15em;
+    color: $light-grey;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-right: 50px;
+  }
+  @at-root #{&}__input {
+    color: $text;
+    font-weight: bold;
+    font-size: 1.15em;
+    transition: 0.5s;
+    border-radius: 4px;
+    &:focus {
+      border-color: darken($accent, 5%);
+    }
+  }
+  @at-root #{&}__button {
+    display: block;
+    margin: 20px auto;
+  }
+}
+
 @import "media"; // Always at the end
