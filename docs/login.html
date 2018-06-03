@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+  <meta charset="utf-8">
+  <title>Main</title>
+  <meta name="description" content="main page">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <!-- Template Basic Images Start -->
+  <meta property="og:image" content="path/to/image.jpg">
+  <link rel="icon" href="img/favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+  <!-- Template Basic Images End -->
+
+  <!-- Custom Browsers Color Start -->
+  <meta name="theme-color" content="#000">
+  <!-- Custom Browsers Color End -->
+
+  <link rel="stylesheet" href="css/main.min.css">
+
+</head>
+
+<body>
+
+
+  <header class="container-fluid">
+    <div class="row align-items-center">
+      <div class="info col">
+        <h3 class="info__text text-center">Whatever header they currently use goes here</h3>
+      </div>
+    </div>
+    <nav class="navigation row">
+      <div class="col-lg-5 offset-lg-1">
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="index.html" class="menu__link">Main</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Women's</a>
+          </li>
+          <li class="menu__item">
+            <a href="#" class="menu__link">Men's</a>
+          </li>
+          <li class="menu__item">
+            <a href="catalog.html" class="menu__link">Catalog</a>
+          </li>
+          <li class="menu__item">
+            <a href="bag.html" class="menu__link">Bag</a>
+          </li>
+          <li class="menu__item">
+            <a href="product.html" class="menu__link">Product</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-2 offset-lg-3">
+        <ul class="menu">
+          <li class="menu__item">
+            <a href="register.html" class="menu__link">Sign Up</a>
+          </li>
+          <li class="menu__item">
+            <a href="login.html" class="menu__link">Sign In</a>
+          </li>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 offset-lg-4 ">
+        <form action="/" method="post" class="form">
+          <section class="form__wrapper">
+            <h4 class="form__title">Log in</h4>
+            <div class="form__row">
+              <label class="form__label" for="loginField">Login</label>
+              <input class="form__input" type="text" name="reg_login" id="loginField">
+            </div>
+            <div class="form__row">
+              <label class="form__label" for="passwordField">Password</label>
+              <input class="form__input" type="password" name="reg_password" id="passwordField">
+            </div>
+            <button class="button button--bordered form__button" type="submit">Log In</button>
+          </section>
+        </form>
+      </div>
+    </div>
+  </main>
+  <script src="js/scripts.min.js"></script>
+
+</body>
+
+</html>
