@@ -17,7 +17,6 @@
   .jumbotron__button {
     display: block;
     margin: 0 auto;
-    margin-top: 60px;
   }
   .detail__title {
     text-align: center;
@@ -29,8 +28,24 @@
   .breadcrumb {
     display: none;
   }
-  .navigation {
+
+  .menu {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    @at-root #{&}--login {
+      flex-direction: row;
+    }
+  }
+  .menu--togled {
+   display: flex;
+  }
+
+  .navigation__toggler {
+    display: block !important;
+    &:focus::after {
+      color:$accent;
+    }
   }
   .slider {
     text-align: center;
