@@ -19,5 +19,5 @@
 
 <ul>
 	<li><strong>gulp</strong>: run default gulp task (sass, js, watch, browserSync) for web development;</li>
-	<li><strong>gulp build</strong>: run docs gulp task (sass, js, img) for create docs folder;</li>
+	<li><strong>gulp docs</strong>: run docs gulp task (sass, js, img) for create docs folder;</li>
  </ul>
